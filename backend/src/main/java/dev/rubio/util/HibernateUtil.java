@@ -15,16 +15,16 @@ public class HibernateUtil {
         if(sessionFactory==null){
             Configuration configuration = new Configuration();
             Properties settings = new Properties();
-            settings.put(Environment.URL, "jdbc:sqlserver://rubio-sql-database.database.windows.net:1433;databaseName=training-db");
-            settings.put(Environment.USER, "Rubio");
-            settings.put(Environment.PASS, "$J965245r");
+            settings.put(Environment.URL, "jdbc:postgresql://localhost:5432/practice-db");
+            settings.put(Environment.USER, "postgres");
+            settings.put(Environment.PASS, "Mentalhealth1");
 
             //https://docs.microsoft.com/en-us/sql/connect/jdbc/working-with-a-connection?view=sql-server-ver15
-            settings.put(Environment.DRIVER, "com.microsoft.sqlserver.jdbc.SQLServerDriver");
+            settings.put(Environment.DRIVER, "org.postgresql.Driver");
             //https://www.javatpoint.com/dialects-in-hibernate
-            settings.put(Environment.DIALECT, "org.hibernate.dialect.SQLServerDialect");
+            settings.put(Environment.DIALECT, "org.hibernate.dialect.PostgreSQLDialect");
 
-            settings.put(Environment.HBM2DDL_AUTO, "validate"); //create first, then validate
+            settings.put(Environment.HBM2DDL_AUTO, "create"); //create first, then validate
             settings.put(Environment.SHOW_SQL, "true");
 
             configuration.setProperties(settings);
