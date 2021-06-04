@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Delete Doctor</title>
+
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">OurFight</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" >
+              <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Resources</a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                    <li><a class="dropdown-item" href="https://www.samhsa.gov/">Substance Abuse and Mental Health Services Administration</a></li>
+                    <li><a class="dropdown-item" href="https://www.medicaid.gov/medicaid/index.html">Medicaid.gov</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href=" " id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Motivational YouTube</a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                    <li><a class="dropdown-item" href="https://www.youtube.com/user/etthehiphoppreacher">Eric Thomas</a></li>
+                    <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCBDWo0g9N8pL8c9QhE8Lxxw">CT Fletcher</a></li>
+                    <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCj9fPezLH1HUh7mSo-tB1Mg">Eckhart Tolle</a></li>
+                    <li><a class="dropdown-item" href="https://www.youtube.com/channel/UC5VP2Yr-U7PHyDKHQQfkH9w">Dare to do</a></li>
+                    <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCybBViio_TH_uiFFDJuz5tg">Einzelgänger</a></li>
+                    <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCkjG1Mo1kkaAbt618YNNYHg">Everyday Stoic</a></li>
+                    <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCw-e1bYI5y7Cr67qeL45YxA">Habits of the Wealthy</a></li>
+                    <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCkqcY4CAuBFNFho6JgygCnA">Jocko Willink</a></li>
+                    <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCL_f53ZEJxp8TtlOkHwMV9Q">Jordan Peterson</a></li>
+                    <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCHCi9A9-ibkH3-fOw4GhZUg">Les Brown</a></li>
+  
+  
+                  </ul>
+                </li>
+              
+                <li class="nav-item">
+                  <a class="nav-link" href="doctors.html">All Doctors</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="therapists.html">Therapists</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="group-therapists.html">Group Therapists</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="psychiatrists.html">Psychiatry</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="child-psychologists.html">Child Psychology</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="marriage-counselors.html"> Marriage Counseling</a>
+                </li>
+                
+               
+                
+                <li class="nav-item" id="new-item-nav-item" style="background-color: aliceblue;" hidden>
+                  <a class="nav-link" href='new-item.html' style="color:crimson; font-weight: bold;">Add New Fighter</a>
+                </li>
+
+                <li class="nav-item" id="new-item-nav-item" style="background-color: aliceblue;" hidden>
+                  <a class="nav-link" href='delete-doctor.html' style="color:crimson; font-weight: bold;">Delete Doctor</a>
+                </li>
+                <li class="nav-item" id ="login-nav-item">
+                  <a class="nav-link" href="login.html">Login</a>
+                </li>
+              
+                <li class="nav-item" id="log-out-nav-item" hidden>
+                  <a class="nav-link">Log Out</a>
+                </li>
+              </ul>
+              <!-- <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form> -->
+            </div>
+          </div>
+        </nav>
+  </header>
+<main>
+    <div class="container">
+    <h1>Delete Doctor</h1>	
+    <form id="delete-doctor-form">
+      <label for="doctor-id">Doctor id</label>
+      <input type="text" id="doctor-id" class="form-control" placeholder="ID Number">
+    
+      <button class="btn btn-primary" type="submit">Delete Doctor</button>
+      <div id="create-msg" hidden></div>
+    </form>
+				
+    </div>
+  </main>
+
+  <script>
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+        })
+</script>
+<script src="nav-items.js"></script>
+<script src="delete-doctor.js"></script>
+<script src="server-requests.js"></script>
+</body>
+
+</html>
