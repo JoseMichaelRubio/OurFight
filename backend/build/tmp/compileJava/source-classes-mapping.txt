@@ -1,30 +1,12 @@
-dev/rubio/Driver.java
- dev.rubio.Driver
-dev/rubio/hib/SpecHibDriver.java
- dev.rubio.hib.SpecHibDriver
-dev/rubio/models/Doctor.java
- dev.rubio.models.Doctor
-dev/rubio/data/DoctorDaoHibImpl.java
- dev.rubio.data.DoctorDaoHibImpl
-dev/rubio/data/SpecializationDaoImpl.java
- dev.rubio.data.SpecializationDaoImpl
-dev/rubio/hib/DocHibDriver.java
- dev.rubio.hib.DocHibDriver
-dev/rubio/util/ConnectionUtil.java
- dev.rubio.util.ConnectionUtil
-dev/rubio/util/SecurityUtil.java
- dev.rubio.util.SecurityUtil
-dev/rubio/data/DoctorDao.java
- dev.rubio.data.DoctorDao
-dev/rubio/controllers/DoctorController.java
- dev.rubio.controllers.DoctorController
-dev/rubio/util/HibernateUtil.java
- dev.rubio.util.HibernateUtil
-dev/rubio/data/SpecializationDao.java
- dev.rubio.data.SpecializationDao
-dev/rubio/models/Specialization.java
- dev.rubio.models.Specialization
-dev/rubio/services/DoctorService.java
- dev.rubio.services.DoctorService
-dev/rubio/controllers/AuthController.java
- dev.rubio.controllers.AuthController
+org/ourfight/models/Specialization.java
+ org.ourfight.models.Specialization
+org/ourfight/Driver.java
+ org.ourfight.Driver
+org/ourfight/models/Doctor.java
+ org.ourfight.models.Doctor
+org/ourfight/controllers/DoctorController.java
+ org.ourfight.controllers.DoctorController
+org/ourfight/repositories/DoctorRepository.java
+ org.ourfight.repositories.DoctorRepository
+org/ourfight/services/DoctorService.java
+ org.ourfight.services.DoctorService

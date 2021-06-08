@@ -1,4 +1,6 @@
 plugins {
+    id 'org.springframework.boot' version '2.4.3'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
 }
 
@@ -9,44 +11,51 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
-    //for logging
-    implementation'org.apache.logging.log4j:log4j-core:2.14.0'
-    implementation'org.apache.logging.log4j:log4j-api:2.14.0'
-    //for javalin
-    implementation'io.javalin:javalin:3.13.3'
-    implementation'org.slf4j:slf4j-simple:1.7.30'
-    implementation'com.fasterxml.jackson.core:jackson-databind:2.10.3'
-    //leverage our different statements in SQL
-    implementation 'org.postgresql:postgresql:42.2.18'
-    // for mockito
-    implementation 'org.mockito:mockito-core:3.2.4'
-    //integration testing
-    testImplementation 'com.konghq:unirest-java:3.4.00'
-    testImplementation 'org.assertj:assertj-core:3.11.1'
-    //For Hibernate and SQL Server
-    implementation 'com.microsoft.sqlserver:mssql-jdbc:8.4.1.jre8'
-    implementation 'org.hibernate:hibernate-core:5.4.30.Final'
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'org.ourfight.Driver',
+        )
+    }
+}
 
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.10.3'
+    implementation group: 'org.decimal4j', name: 'decimal4j', version: '1.0.3'
+    implementation 'com.microsoft.sqlserver:mssql-jdbc:9.2.1.jre8'
+    implementation 'org.hibernate:hibernate-core:5.4.30.Final'
+    implementation 'io.jsonwebtoken:jjwt-api:0.11.2'
+    implementation 'io.jsonwebtoken:jjwt-impl:0.11.2'
+    implementation 'io.jsonwebtoken:jjwt-jackson:0.11.2'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    runtimeOnly 'org.postgresql:postgresql'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:2020.0.2"
+    }
 }
 
 test {
     useJUnitPlatform()
 }
 
-//New final Jar Task
-task finalJar(type: Jar) {
-    manifest {
-        attributes 'Main-Class': 'dev.rubio.Driver'
-    }
+////New final Jar Task
 
-    from sourceSets.main.output
+//task finalJar(type: Jar) {
+//    manifest {
+//        attributes 'Main-Class': 'org.ourfight.Driver'
+//    }
+//
+//    from sourceSets.main.output
+//
+//    dependsOn configurations.runtimeClasspath
+//    from {
+//        configurations.runtimeClasspath.findAll { it.name.endsWith('jar') }.collect { zipTree(it) }
+//    }
+//    exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
+//}
 
-    dependsOn configurations.runtimeClasspath
-    from {
-        configurations.runtimeClasspath.findAll { it.name.endsWith('jar') }.collect { zipTree(it) }
-    }
-    exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
-}
