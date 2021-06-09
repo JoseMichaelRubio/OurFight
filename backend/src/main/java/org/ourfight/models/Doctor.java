@@ -9,7 +9,7 @@ import java.util.Objects;
 public class Doctor implements Serializable {
     @Id //determines primary key
     @GeneratedValue(strategy = GenerationType.IDENTITY) //auto incrementing, behaves like a serial datatype
-    private int id;
+    private Long id;
     private String name;
     private String gender;
     private boolean available;
@@ -24,7 +24,9 @@ public class Doctor implements Serializable {
     private Specialization specialty;
 
 
-    public Doctor(int id, String name, Specialization specialty, String gender, boolean available, boolean volunteer){
+
+
+    public Doctor(Long id, String name, Specialization specialty, String gender, boolean available, boolean volunteer){
         this.id = id;
         this.name = name;
         this.specialty = specialty;
@@ -48,7 +50,7 @@ public class Doctor implements Serializable {
         this.gender = gender;
     }
 
-    public Doctor(int id) {
+    public Doctor(Long id) {
         this.id = id;
     }
 
@@ -56,11 +58,11 @@ public class Doctor implements Serializable {
     }
 
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -109,26 +111,12 @@ public class Doctor implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Doctor doctor = (Doctor) o;
-        return id == doctor.id && available == doctor.available && volunteer == doctor.volunteer && Objects.equals(name, doctor.name) && Objects.equals(gender, doctor.gender) && Objects.equals(specialty, doctor.specialty);
+        return available == doctor.available && volunteer == doctor.volunteer && Objects.equals(id, doctor.id) && Objects.equals(name, doctor.name) && Objects.equals(gender, doctor.gender) && Objects.equals(specialty, doctor.specialty);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(id, name, gender, available, volunteer, specialty);
     }
-
-    @Override
-    public String toString() {
-        return "Doctor{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", gender='" + gender + '\'' +
-                ", available=" + available +
-                ", volunteer=" + volunteer +
-                ", specialty=" + specialty +
-                '}';
-    }
-
-
 }
 
