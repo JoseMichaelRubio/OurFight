@@ -1,0 +1,6 @@
+header{
+  grid-area: header_section;
+}
+#new-item-nav-item{
+  text-decoration-color: rgb(233, 3, 3);
+}
