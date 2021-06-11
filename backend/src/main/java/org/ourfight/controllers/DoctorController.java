@@ -43,4 +43,13 @@ public class DoctorController {
         doctorService.updateDoctor(doctor);
         return new ResponseEntity<>(doctor, HttpStatus.ACCEPTED);
     }
+
+    @GetMapping("/marriage-counselors")
+    public  ResponseEntity<List<Doctor>> getMarriageCounselors(@RequestParam(value = "name", required = false) String nameParam){
+        return ResponseEntity.ok().body(doctorService.getMarriageCounselors());
+    }
+    @GetMapping("/psychiatrists")
+    public ResponseEntity<List<Doctor>> getPsychiatrists(@RequestParam(value ="name", required = false) String nameParam){
+        return ResponseEntity.ok().body(doctorService.getPsychiatrists());
+    }
 }

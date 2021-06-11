@@ -25,4 +25,12 @@ public class DoctorService {
 
     public Doctor updateDoctor(Doctor doctor) { return doctorRepository.save(doctor);
     }
-}
+
+    public List<Doctor> getMarriageCounselors() {
+        return doctorRepository.getDoctorsOfMarriageCounselor();
+    }
+
+    public List<Doctor> getPsychiatrists(){
+        return doctorRepository.getDoctorsOfPsychiatry();
+    }
+    }

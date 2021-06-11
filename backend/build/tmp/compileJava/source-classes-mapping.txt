@@ -2,11 +2,11 @@ org/ourfight/models/Specialization.java
  org.ourfight.models.Specialization
 org/ourfight/Driver.java
  org.ourfight.Driver
-org/ourfight/repositories/DoctorRepository.java
- org.ourfight.repositories.DoctorRepository
 org/ourfight/models/Doctor.java
  org.ourfight.models.Doctor
 org/ourfight/controllers/DoctorController.java
  org.ourfight.controllers.DoctorController
+org/ourfight/repositories/DoctorRepository.java
+ org.ourfight.repositories.DoctorRepository
 org/ourfight/services/DoctorService.java
  org.ourfight.services.DoctorService
