@@ -8,13 +8,14 @@ export class Doctor{
   volunteer: boolean;
   specialty: Specialty;
 
-  constructor(_id?:number,_name?:string,_gender?:string,_available?:boolean,_volunteer?:boolean,_specialty:Specialty){
-    this.id=_id || 0;
-    this.name=_name || "";
-    this.gender =_gender || "";
-    this.available=_available || false;
-    this.volunteer=_volunteer || false;
-    this.specialty=_specialty || ""; //this instance doesnt have a ?
+  constructor(doctor:any){
+    this.id = doctor.id;
+    this.name = doctor.name;
+    this.gender = doctor.gender;
+    this.available = doctor.available;
+    this.volunteer= doctor.volunteer;
+    this.specialty = doctor.specialty;
+
 
 
   }
@@ -22,4 +23,4 @@ export class Doctor{
 
 }
 
-}
+

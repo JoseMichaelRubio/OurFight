@@ -1,1 +1,30 @@
-<p>psychiatry works!</p>
+<main class ="container table">
+  <h1>Psychiatrists</h1>
+<table mdbTable class= "table">
+  <thead>
+    <tr>
+      <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr mdbTableCol *ngFor="let doctor of doctors">
+      <th scope="row">{{doctor.id}}</th>
+      <td>{{doctor.name}}</td>
+      <td>{{doctor.gender}}</td>
+      <td>{{doctor.available}}</td>
+      <td>{{doctor.volunteer}}</td>
+      <td>{{doctor.specialty}}</td>
+    </tr>
+  </tbody>
+</table>
+</main>
+
+
+<!-- <main class="container">
+  <ul class="list-group" >
+      <li class="list-group-item" *ngFor="let doctor of doctors">
+        <pre>{{doctor.id }} - {{doctor.name}} - {{doctor.gender}} - {{doctor.available}} - {{doctor.volunteer}} - {{doctor.specialty}}
+        </pre></li>
+      <li class="list-group-item" *ngIf="errorMessage">{{errorMessage}}</li>
+  </ul>
+</main> -->
