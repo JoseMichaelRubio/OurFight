@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f223a027-661a-472e-bca3-0481bdac54e1" name="Default Changelist" comment="Oh yeah">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.7/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ourfight/controllers/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ourfight/controllers/DoctorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ourfight/repositories/DoctorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ourfight/repositories/DoctorRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/ourfight/services/DoctorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/ourfight/services/DoctorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/frontend-angular/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/frontend-angular/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/frontend-angular/src/app/doctors/marriage-counseling/marriage-counseling.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/frontend-angular/src/app/doctors/marriage-counseling/marriage-counseling.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/frontend-angular/src/app/doctors/marriage-counseling/marriage-counseling.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/frontend-angular/src/app/doctors/marriage-counseling/marriage-counseling.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/frontend-angular/src/app/navbar/navbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/frontend-angular/src/app/navbar/navbar.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

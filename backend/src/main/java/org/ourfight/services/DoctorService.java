@@ -15,22 +15,38 @@ public class DoctorService {
     DoctorRepository doctorRepository;
 
 
-    public List<Doctor> getAll(){ return doctorRepository.findAll(); }
-
-    public Doctor create(Doctor doctor) { return doctorRepository.save(doctor);
+    public List<Doctor> getAll() {
+        return doctorRepository.findAll();
     }
 
-    public void deleteDoctor(long id) { doctorRepository.deleteById(id);
+    public Doctor create(Doctor doctor) {
+        return doctorRepository.save(doctor);
     }
 
-    public Doctor updateDoctor(Doctor doctor) { return doctorRepository.save(doctor);
+    public void deleteDoctor(long id) {
+        doctorRepository.deleteById(id);
+    }
+
+    public Doctor updateDoctor(Doctor doctor) {
+        return doctorRepository.save(doctor);
     }
 
     public List<Doctor> getMarriageCounselors() {
         return doctorRepository.getDoctorsOfMarriageCounselor();
     }
 
-    public List<Doctor> getPsychiatrists(){
+    public List<Doctor> getPsychiatrists() {
         return doctorRepository.getDoctorsOfPsychiatry();
     }
+
+    public List<Doctor> getGroupTherapists() {
+        return doctorRepository.getGroupTherapists();
     }
+
+    public List<Doctor> getTherapists(){
+        return doctorRepository.getTherapists();
+    }
+    public List<Doctor> getChildPsychologists(){
+        return doctorRepository.getChildPsychologists();
+    }
+}

@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
 import javax.print.Doc;
@@ -51,5 +52,17 @@ public class DoctorController {
     @GetMapping("/psychiatrists")
     public ResponseEntity<List<Doctor>> getPsychiatrists(@RequestParam(value ="name", required = false) String nameParam){
         return ResponseEntity.ok().body(doctorService.getPsychiatrists());
+    }
+    @GetMapping("/group-therapists")
+    public ResponseEntity<List<Doctor>> getGroupTherapists(@RequestParam(value ="name", required = false) String nameParam){
+        return ResponseEntity.ok().body(doctorService.getGroupTherapists());
+    }
+    @GetMapping("/child-psychologists")
+    public ResponseEntity<List<Doctor>> getChildPsychologists(@RequestParam(value ="name", required = false) String nameParam){
+        return ResponseEntity.ok().body(doctorService.getChildPsychologists());
+    }
+    @GetMapping("/therapists")
+    public ResponseEntity<List<Doctor>> getTherapists(@RequestParam(value = "name", required = false) String nameParam){
+        return ResponseEntity.ok().body(doctorService.getTherapists());
     }
 }

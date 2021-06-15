@@ -17,4 +17,13 @@ public interface DoctorRepository extends JpaRepository<Doctor,Long> {
     @Query(value ="select * from doctor d where specialty_specialty = 'Psychiatrist';", nativeQuery = true)
     List<Doctor> getDoctorsOfPsychiatry();
 
+    @Query(value= "select * from doctor d where specialty_specialty = 'Therapy';", nativeQuery = true)
+    List<Doctor> getTherapists();
+
+    @Query(value="select * from doctor d where specialty_specialty ='Group Therapy';", nativeQuery = true)
+    List<Doctor> getGroupTherapists();
+
+    @Query(value ="select * from doctor d where specialty_specialty = 'Child Psychology';", nativeQuery = true)
+    List<Doctor> getChildPsychologists();
+
 }
