@@ -1,16 +1,17 @@
-import { MarriageCounselingDataService } from './../../service/marriage-counseling-data.service';
+import { TherapyDataService } from './../../service/therapy-data.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Doctor } from 'src/app/models/doctor';
 
-@Component({
-  selector: 'app-marriage-counseling',
-  templateUrl: './marriage-counseling.component.html',
-  styleUrls: ['./marriage-counseling.component.css']
-})
-export class MarriageCounselingComponent implements OnInit {
 
-  asyncDoctors: Observable<Doctor[]> = this.doctorService.getMarriageCounselors();
+@Component({
+  selector: 'app-therapy',
+  templateUrl: './therapy.component.html',
+  styleUrls: ['./therapy.component.css']
+})
+export class TherapyComponent implements OnInit {
+
+  asyncDoctors: Observable<Doctor[]> = this.doctorService.getTherapists();
 
   doctors: Doctor[] =[];
   errorMessage: string = "";
@@ -19,8 +20,8 @@ export class MarriageCounselingComponent implements OnInit {
 
 
 
-  constructor(private doctorService: MarriageCounselingDataService) {
-    doctorService.getMarriageCounselors().subscribe(
+  constructor(private doctorService: TherapyDataService) {
+    doctorService.getTherapists().subscribe(
       (doctorsReturned)=>{
         this.doctors = doctorsReturned;
         doctorsReturned.forEach(i=>{this.maxStringLength=Math.max(i.name.length, this.maxStringLength)});

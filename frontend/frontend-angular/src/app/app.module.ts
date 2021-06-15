@@ -8,6 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PsychiatryComponent } from './doctors/psychiatry/psychiatry.component';
 import { MarriageCounselingComponent } from './doctors/marriage-counseling/marriage-counseling.component';
+import { ChildPsychologyComponent } from './doctors/child-psychology/child-psychology.component';
+import { TherapyComponent } from './doctors/therapy/therapy.component';
+import { GroupTherapyComponent } from './doctors/group-therapy/group-therapy.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { MarriageCounselingComponent } from './doctors/marriage-counseling/marri
     HomeComponent,
     NavbarComponent,
     PsychiatryComponent,
-    MarriageCounselingComponent
+    MarriageCounselingComponent,
+    ChildPsychologyComponent,
+    TherapyComponent,
+    GroupTherapyComponent
   ],
   imports: [
     BrowserModule,
