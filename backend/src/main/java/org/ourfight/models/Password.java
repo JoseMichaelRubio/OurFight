@@ -12,6 +12,7 @@ import java.util.Objects;
 @Component
 @Scope("prototype")
 @JsonIgnoreProperties("hibernateLazyInitializer")
+@Table(name= "password")
 public class Password {
     @Id
     private Long employeeId;

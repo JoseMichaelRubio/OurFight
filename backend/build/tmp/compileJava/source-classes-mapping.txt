@@ -10,3 +10,15 @@ org/ourfight/repositories/DoctorRepository.java
  org.ourfight.repositories.DoctorRepository
 org/ourfight/services/DoctorService.java
  org.ourfight.services.DoctorService
+org/ourfight/services/AuthService.java
+ org.ourfight.services.AuthService
+org/ourfight/controllers/AuthController.java
+ org.ourfight.controllers.AuthController
+org/ourfight/models/Role.java
+ org.ourfight.models.Role
+org/ourfight/models/Token.java
+ org.ourfight.models.Token
+org/ourfight/models/Password.java
+ org.ourfight.models.Password
+org/ourfight/models/User.java
+ org.ourfight.models.User
